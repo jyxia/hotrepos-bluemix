@@ -1,18 +1,8 @@
 import React, { Component, PropTypes } from 'react'
 import Image from './Image'
+import PrevArrow from './PrevArrow'
+import NextArrow from './NextArrow'
 import Slider from 'react-slick'
-
-class PrevArrow extends Component {
-  render() {
-    return <div {...this.props} style={{display: 'none'}}></div>
-  }
-}
-
-class NextArrow extends Component {
-  render() {
-    return <div {...this.props} style={{display: 'none'}}></div>
-  }
-}
 
 export default class Screenshots extends Component {
   render() {
@@ -21,7 +11,7 @@ export default class Screenshots extends Component {
       autoplay: true,
       speed: 250,
       prevArrow: <PrevArrow />,
-      nextArrow: <NextArrow />,
+      nextArrow: <NextArrow />
     }
 
     return (

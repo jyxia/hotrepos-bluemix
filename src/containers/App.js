@@ -3,9 +3,7 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import * as Actions from '../actions'
 
-import LeftSide from '../components/left/LeftSide'
-import RightSide from '../components/right/RightSide'
-import Footer from '../components/footer/Footer'
+import Main from '../components/Main'
 
 class App extends Component {
 
@@ -17,17 +15,7 @@ class App extends Component {
   render() {
     const { images } = this.props
     return (
-      <div>
-        <div className="main">
-          <div className="container">
-            <div className="row">
-              <LeftSide imageList={images} />
-              <RightSide />
-            </div>
-          </div>
-        </div>
-        <Footer />
-      </div>
+      <Main images={images} />
     )
   }
 }
@@ -37,6 +25,7 @@ App.propTypes = {
   fetchImagesIfNeed: PropTypes.func.isRequired
 }
 
+// @TODO alert is reserved when there is an error for fetching images
 function mapStateToProps(state) {
   const { imageList, message } = state
   const images = imageList || []

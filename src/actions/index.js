@@ -5,7 +5,6 @@ export const DISMISS_MESSAGE = 'DISMISS_MESSAGE'
 export const SEND_MESSAGE = 'SEND_MESSAGE'
 export const RECEIVE_NO_IMAGE = 'RECEIVE_NO_IMAGE'
 export const REQUEST_IMAGES = 'REQUEST_IMAGES'
-export const REQUEST_DEFAULT_IMAGES = 'REQUEST_DEFAULT_IMAGES'
 
 function requestImages() {
   return {
@@ -26,12 +25,6 @@ function receiveNoImage() {
   }
 }
 
-function requestDefaultIamges() {
-  return {
-    type: REQUEST_DEFAULT_IMAGES
-  }
-}
-
 function dismissMessage() {
   return {
     type: DISMISS_MESSAGE
@@ -49,7 +42,7 @@ function fetchImages() {
   return dispatch => {
     dispatch(requestImages())
     dispatch(sendMessage('Loading...'))
-    return fetch(`./api/images`)
+    return fetch('./api/images')
       .then(response => response.json())
       .then(json => {
         if (json.length > 0) {

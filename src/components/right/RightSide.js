@@ -5,7 +5,7 @@ import AppDescription from './AppDescription'
 export default class RightSide extends Component {
   render() {
     return (
-      <div className="col-sm-6">
+      <div className="col-sm-6 rightside">
         <div className="marketing">
           <DownloadButton />
           <AppDescription />
