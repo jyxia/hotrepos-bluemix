@@ -12,7 +12,7 @@ This is [HotRepos](https://itunes.apple.com/app/id1142465304?mt=8) iOS App's web
 * Or, use `cf` cli to push this app to Bluemix manually.
   * clone this repo to your computer. `git clone`
   * navigate to `hotrepos-bluemix`
-  * open [`manifest.yml`](./mainifest.yml) change `name` and `host` to *you_app_name*.
+  * open [`manifest.yml`](./manifest.yml) change `name` and `host` to *you_app_name*.
   * Run `cf push *you_app_name*`.
 
 > **Note:** Above instructions are assuming you have installed `cf` cli on your computer and has a Bluemix account. If you don't have any, create [Bluemix account](https://console.ng.bluemix.net/) -> Download [cf cli](https://github.com/cloudfoundry/cli/releases) -> Setup [cf tool](https://console.ng.bluemix.net/docs/cli/reference/cfcommands/index.html).
@@ -35,7 +35,7 @@ This is [HotRepos](https://itunes.apple.com/app/id1142465304?mt=8) iOS App's web
 
 > **Note:** In `dev` mode, `redux-logger` and webpack hot modules are included for development purpose. In `build` or `prod` mode, these dev tools are removed and `dist` folder gets cleaned every time.
 
-## Developement
+## Development Tools
 #### JS framework: React and Redux
 * See [src](./src) folder for the code and the structure.
 * `Redux` is only used for demonstrating my Redux skill. Although a lot of React components are created, there are not many states changes in the components. This is really a very static page.
@@ -45,8 +45,9 @@ This is [HotRepos](https://itunes.apple.com/app/id1142465304?mt=8) iOS App's web
 * `autoprefixer` takes care of `css` prefixers across different browsers.
 
 ### Web server
+* Host the webpages and static files.
 * Use `Express` create a simply backend API for retrieving screenshot images.
-* Doing this is only for demonstrating the *`actions` and `states` chages* in `Redux`. In real life, probably, you don't want to do like this.
+* Doing this is only for demonstrating the *`actions` and `states` changes* in `Redux`. In real life, probably, you don't want to do like this.
 
 ## Dependencies
 All dependencies are declared in [`package.json`](./package.json). Special thanks to *MIT-licenced* React component: [`react-slick`](https://github.com/akiran/react-slick). It made the implementation of slide show easily.  
