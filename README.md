@@ -2,27 +2,28 @@
 --------------------------------------------------------------------------------
 
 ## Overview
-This is [HotRepos](https://itunes.apple.com/app/id1142465304?mt=8) iOS App's web landing page.
+This is [HotRepos](https://itunes.apple.com/app/id1142465304?mt=8) iOS App's web landing page. It is now a **React** web app deployed on Bluemix, and the link is: http://hotrepos.mybluemix.net/
 
 ## Deploy to Bluemix
 * Just simply click this magic button.
 
   [![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy)
 --------------------------------------------------------------------------------
-* Use `cf` cli to push this app to Bluemix.
-  * Clone this repo to your computer. `git clone`
-  * Navigate to `hotrepos-bluemix`
-  * Run `cf push`
+* Or, use `cf` cli to push this app to Bluemix manually.
+  * clone this repo to your computer. `git clone`
+  * navigate to `hotrepos-bluemix`
+  * open [`manifest.yml`](./mainifest.yml) change `name` and `host` to *you_app_name*.
+  * Run `cf push *you_app_name*`.
 
-> **Note:** Above instructions are assuming you have installed `cf` cli on your computer and has a Bluemix account. Download [cf cli](https://github.com/cloudfoundry/cli/releases). Create [Bluemix account](https://console.ng.bluemix.net/). Setup [cf tool](https://console.ng.bluemix.net/docs/cli/reference/cfcommands/index.html).
+> **Note:** Above instructions are assuming you have installed `cf` cli on your computer and has a Bluemix account. If you don't have any, create [Bluemix account](https://console.ng.bluemix.net/) -> Download [cf cli](https://github.com/cloudfoundry/cli/releases) -> Setup [cf tool](https://console.ng.bluemix.net/docs/cli/reference/cfcommands/index.html).
 
 ## Run the app locally
-* clone this repo to your computer
-* cd into the app directory
-* Run `npm install` to install the app's dependencies
+* clone this repo to your computer (`git clone`)
+* cd into the app directory (hotrepos-bluemix)
+* run `npm install` to install the app's dependencies
 * start the development
-  1. Run `npm start` or `npm run start`
-  2. Navigate to http://localhost:6001 in your browser of choice.
+  1. run `npm start` or `npm run start`
+  2. navigate to http://localhost:6001 in your browser of choice.
 * lint your code
   1. Run `npm run lint`
 * start production / build
@@ -37,14 +38,15 @@ This is [HotRepos](https://itunes.apple.com/app/id1142465304?mt=8) iOS App's web
 ## Developement
 #### JS framework: React and Redux
 * See [src](./src) folder for the code and the structure.
-* `Redux` is only used for demo purpose. There is not too many state changes in this simple web app.
+* `Redux` is only used for demonstrating my Redux skill. Although a lot of React components are created, there are not many states changes in the components. This is really a very static page.
 
 #### CSS
-* **`bootstrap`** is used for css framework
-* **`autoprefixer`** takes care of `css` prefixers across different browsers.
+* `bootstrap` is used for css framework
+* `autoprefixer` takes care of `css` prefixers across different browsers.
 
 ### Web server
-* Create a simply backend API for retrieving screenshot images.
-* Doing this is only for demonstrating the *`actions`* in `Redux`. In real life, probably, you don't want to do that.
+* Use `Express` create a simply backend API for retrieving screenshot images.
+* Doing this is only for demonstrating the *`actions` and `states` chages* in `Redux`. In real life, probably, you don't want to do like this.
 
 ## Dependencies
+All dependencies are declared in [`package.json`](./package.json). Special thanks to *MIT-licenced* React component: [`react-slick`](https://github.com/akiran/react-slick). It made the implementation of slide show easily.  
