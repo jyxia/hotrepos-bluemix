@@ -8,7 +8,7 @@ module.exports = {
     './src/index.js'
   ],
   output: {
-    path: require("path").resolve(__dirname, "public"),
+    path: require('path').resolve(__dirname, 'public'),
     filename: 'bundle.js',
     publicPath: '/js/'
   },

@@ -1,16 +1,16 @@
-import React, { Component } from 'react'
-import DownloadButton from './DownloadButton'
-import AppDescription from './AppDescription'
+import React, { Component, PropTypes } from 'react'
+import Screenshots from './Screenshots'
 
 export default class RightSide extends Component {
   render() {
     return (
       <div className="col-sm-6 rightside">
-        <div className="marketing">
-          <DownloadButton />
-          <AppDescription />
-        </div>
+        <Screenshots imageList={this.props.imageList} />
       </div>
     )
   }
+}
+
+RightSide.propTypes = {
+  imageList: PropTypes.array.isRequired
 }

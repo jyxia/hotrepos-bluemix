@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  font-family:  Helvetica, "Helvetica Neue", Arial, "Lucida Grande", sans-serif;
+  font-family:  -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 html,
@@ -9,11 +9,8 @@ body {
 }
 
 body {
-  background-image: linear-gradient(180deg, #ff7832 0%, #ff3947 100%);
-  background-color: #eee;
   background-size: cover;
   color: #eee;
-  font-size: 18px;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 }
@@ -26,34 +23,28 @@ a {
   display: none;
 }
 
-.container {
-  max-width: 980px;
-}
-
 .main {
+  background-image: linear-gradient(180deg, #ff9f3b 0%, #ff7455 100%);
   position: relative;
   min-height: 100%;
   padding-top: 70px;
   padding-bottom: 60px;
 }
 
-.footer {
-  padding-bottom: 50px;
-}
-
 .marketing {
-  text-align: center;
+  text-align: left;
 }
 
 .app-meta {
   margin-top: 20px;
   margin-bottom: 20px;
   font-size: 32px;
+  color: white;
 }
 
 .app-icon {
-  display: block;
-  margin: 0 auto 10px;
+  display: inline;
+  margin: 0 10px 10px 10px;
   border-radius: 15px;
   width: 92px;
 	min-width: 40px;
@@ -61,14 +52,10 @@ a {
 }
 
 .app-name {
-  margin-left: 10px;
-}
-
-.marketing-desc {
-  margin: 0 auto 20px;
-  max-width: 450px;
-  white-space: pre-wrap;
-  font-weight: 500;
+  font-size: 60px;
+  font-weight: 300;
+  vertical-align: top;
+  padding: 5px;
 }
 
 .download-buttons {
@@ -76,42 +63,124 @@ a {
 }
 
 .download-btn {
-  margin: 20px auto;
+  margin: 0 10px 5px 10px;
   border: none;
   display: inline-block;
-  background-image: url("https://dn-catchinc.qbox.me/button_ios.svg");
   background-repeat: no-repeat;
   background-size: 100%;
   width: 200px;
   height: 60px;
 }
 
-.marketing dt {
-  margin: 15px, 0px, 15px, 0px;
-  font-size: 25px;
+.download-btn.ios {
+  background-image: url(../assets/images/buttons/button_ios.svg);
 }
 
-.marketing dd {
-  color: #f5f5f5;
-  margin-bottom: 10px;
+.download-btn.android {
+  background-image: url(../assets/images/buttons/button_soon.svg);
+}
+
+.content {
+  text-align: center;
+}
+
+.content h2 {
+  color: #38A6F9;
+  line-height: 35px;
+}
+
+.content h4 {
+  color: #808080;
+  line-height: 24px;
+}
+
+.content .feature {
+  padding: 10px;
+  border: 0;
+  vertical-align: baseline;
+}
+
+.content .feature img {
+  max-width: 200px;
+  max-height: 200px;
+  padding: 20px;
+}
+
+.content .top {
+  width: 50px;
+  height: 50px;
+  margin: 20px auto;
+  background-image: url(../assets/images/buttons/icon_scrolltop.svg);
+  cursor: pointer;
+}
+
+.swipe {
+  visibility: hidden;
+  height: 0;
+}
+
+.swipe .feature {
+  margin: 5px auto;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.footer {
+  padding: 20px 0 0 10px;
+  color: #808080;
+}
+
+.footer h6 {
+  color: darkgrey;
 }
 
 .device {
   margin: auto
 }
 
-@media (min-width: 768px) {
+/*@media (min-width: 768px) {
   .marketing {
     text-align: left;
   }
   .app-icon {
     display: inline;
   }
-  .app-meta-center {
+  .swipe {
+    visibility: hidden;
+    height: 0;
+  }
+}*/
+
+@media (max-width: 768px) {
+  .main {
+    padding-top: 20px;
+  }
+
+  .marketing {
     text-align: center;
   }
-  .marketing-desc {
-		text-align: left;
+
+  .content .feature img {
+    max-width: 140px;
+    max-height: 140px;
+  }
+
+  .app-icon {
+    display: block;
+    margin: 5px auto;
+  }
+
+  .content .swipe {
+    visibility: visible;
+    height: auto;
+    top: -30px;
+    width: 85%;
+    margin: 5px auto;
+  }
+
+  .content .wide {
+    display: none;
   }
 }
 

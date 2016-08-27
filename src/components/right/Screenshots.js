@@ -1,8 +1,9 @@
 import React, { Component, PropTypes } from 'react'
-import Image from './Image'
-import PrevArrow from './PrevArrow'
-import NextArrow from './NextArrow'
 import Slider from 'react-slick'
+
+import Image from './Image'
+import PrevArrow from '../arrows/PrevArrow'
+import NextArrow from '../arrows/NextArrow'
 
 export default class Screenshots extends Component {
   render() {

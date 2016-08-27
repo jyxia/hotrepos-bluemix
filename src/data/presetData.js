@@ -1,4 +1,4 @@
-import defaultImage from './assets/images/screenshots/app-screen-1.png'
+import defaultImage from '../assets/images/screenshots/app-screen-1.png'
 
 const preloadedState = [
   {
