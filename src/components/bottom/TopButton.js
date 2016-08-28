@@ -1,8 +1,10 @@
 import React, { Component } from 'react'
+import Scroll from 'react-scroll'
 
 export default class TopButton extends Component {
   scrollToTop() {
-    window.scrollTo(0, 0)
+    let scroll = Scroll.animateScroll
+    scroll.scrollToTop()
   }
 
   render() {

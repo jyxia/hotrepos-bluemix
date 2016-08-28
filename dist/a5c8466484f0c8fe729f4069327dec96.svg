@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="50px" height="50px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.4.4 (17249) - http://www.bohemiancoding.com/sketch -->
+    <title>icon_scrolltop</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="-" sketch:type="MSArtboardGroup" transform="translate(-695.000000, -1200.000000)">
+            <g id="Main" sketch:type="MSLayerGroup" transform="translate(250.000000, 750.000000)">
+                <g id="icon_scrolltop" transform="translate(445.000000, 450.000000)" sketch:type="MSShapeGroup">
+                    <circle id="Oval-50" stroke="#BFBFBF" stroke-width="1.20000005" cx="25" cy="25" r="17"></circle>
+                    <path d="M25.0035255,20.0055351 C24.7729003,19.9775038 24.5332012,20.0559952 24.3562647,20.2397877 L18.2299461,26.6034904 C17.9231496,26.9221748 17.9232754,27.4399262 18.23078,27.7593461 C18.5404285,28.080993 19.0364749,28.0791538 19.343519,27.7602123 L24.9995516,21.8850183 L30.6555842,27.7602123 C30.9623807,28.0788966 31.4608185,28.078766 31.7683232,27.7593461 C32.0779717,27.4376992 32.0762012,26.922432 31.7691571,26.6034904 L25.6428385,20.2397877 C25.4682837,20.0584692 25.2316917,19.9803559 25.0035255,20.0055351 L25.0035255,20.0055351 Z" id="Rectangle-165" fill="#BFBFBF"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
