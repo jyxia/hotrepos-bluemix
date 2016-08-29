@@ -10,17 +10,18 @@ This is [HotRepos](https://itunes.apple.com/app/id1142465304?mt=8) iOS App's web
 --------------------------------------------------------------------------------
 * Or, use _*cf cli*_ to push this app to Bluemix manually.
   * clone this repo to your computer.
-  ```
-  git clone https://github.com/jyxia/hotrepos-bluemix.git
-  ```
+    ```
+    git clone https://github.com/jyxia/hotrepos-bluemix.git
+    ```
     
   * `cd` navigate to _*hotrepos-bluemix*_ directory
   * open [_manifest.yml_](./manifest.yml) change `name` and `host` to 'you_app_name'.
-  * run
-  ```
-  cf push
-  ```
-
+  * after you have saved your mainfest file, push this project to Bluemix.
+    
+    ```
+    cf push
+    ```
+  
   > **Note:** Above instructions are assuming you have installed _cf cli_ on your computer and have a Bluemix account. If you don't have any, create [Bluemix account](https://console.ng.bluemix.net/) -> Download [cf cli](https://github.com/cloudfoundry/cli/releases) -> Setup [cf tool](https://console.ng.bluemix.net/docs/cli/reference/cfcommands/index.html) and login Bluemix with _cf cli_ (see [Bluemix login](#bluemix-login)).
 
 ## Run the app locally
@@ -41,19 +42,21 @@ This is [HotRepos](https://itunes.apple.com/app/id1142465304?mt=8) iOS App's web
     ==> 🌎  Listening on port 6001. Open up http://localhost:6001 in your browser.
     ```
 
-    > ** Note:** `cfenv` might assign you a different port (other than 6001), just use the port number shown on the terminal. In this instruction, I'll just use the `cfenv` default port number (6001).
+    > **Note:**  `cfenv` might assign you a different port (other than 6001), just use the port number shown on the terminal. In this instruction, I'll just use the `cfenv` default port number (6001).
 
   2. open up [http://localhost:6001](http://localhost:6001) in your browser of choice.
 * Start the production (prod mode)
   1. run
-  ```
-  npm run build
-  ```
+    ```
+    npm run build
+    ```
     Production files are all generated into [dist](./dist).
+  
   2. wait until `webpack` finishes building all files, then run the web server (production server)
-  ```
-  npm run web-server
-  ```
+    ```
+    npm run web-server
+    ```
+  
   3. navigate to [http://localhost:6001](http://localhost:6001) in the browser. Again, your port number might be different than 6001.
 
 * If you want to lint your code,
@@ -87,11 +90,11 @@ This is [HotRepos](https://itunes.apple.com/app/id1142465304?mt=8) iOS App's web
   * The page is fully responsive. Please try.
 * [`autoprefixer`](https://github.com/postcss/autoprefixer) takes care of `css` prefixers across different browsers.
 
-#### Web server
+#### Web server (Express)
 * Host the webpages and static files, particularly HotRepos iOS app's screenshots that are displayed on the webpage.
-* Use `Express` to create a simply backend API for retrieving the `urls` of screenshot images (image file paths).
+* Create a simply backend API for retrieving the `urls` of screenshot images (image file paths).
   * `/api/images` is the route.
-
+   
   > **Note:** Doing this is only for demonstrating the *`actions` and `states` changes* in `Redux` on the client side. In real life, probably, you don't want to do like this.
 
 #### Babel and Linting
@@ -104,12 +107,14 @@ All dependencies are declared in [package.json](./package.json). Special thanks 
 ## Comments
 If you have any questions or troubles in running the app and deploying to Bluemix, please contact me.
 
-## Bluxmix login
+## Bluemix login
 1. On your terminal, run this command:
-```
+  ```
   cf api https://api.ng.bluemix.net
-```
+  ```
+  
 2. After you run following command, you will see a promote to ask you input your username and password,
-```
+  ```
   cf login
-```
+  ```
+
