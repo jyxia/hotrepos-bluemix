@@ -10,15 +10,16 @@ This is [HotRepos](https://itunes.apple.com/app/id1142465304?mt=8) iOS App's web
 --------------------------------------------------------------------------------
 * Or, use _*cf cli*_ to push this app to Bluemix manually.
   * clone this repo to your computer.
-    ```
-      git clone https://github.com/jyxia/hotrepos-bluemix.git
-    ```
+  ```
+  git clone https://github.com/jyxia/hotrepos-bluemix.git
+  ```
+    
   * `cd` navigate to _*hotrepos-bluemix*_ directory
   * open [_manifest.yml_](./manifest.yml) change `name` and `host` to 'you_app_name'.
   * run
-    ```
-      cf push
-    ```
+  ```
+  cf push
+  ```
 
   > **Note:** Above instructions are assuming you have installed _cf cli_ on your computer and have a Bluemix account. If you don't have any, create [Bluemix account](https://console.ng.bluemix.net/) -> Download [cf cli](https://github.com/cloudfoundry/cli/releases) -> Setup [cf tool](https://console.ng.bluemix.net/docs/cli/reference/cfcommands/index.html) and login Bluemix with _cf cli_ (see [Bluemix login](#bluemix-login)).
 
@@ -29,11 +30,11 @@ This is [HotRepos](https://itunes.apple.com/app/id1142465304?mt=8) iOS App's web
 * Start the development (dev mode)
   1. run  
     ```
-      npm start
+    npm start
     ```
     or
     ```
-      npm run start
+    npm run start
     ```
     You will see this line on your terminal
     ```
@@ -45,31 +46,33 @@ This is [HotRepos](https://itunes.apple.com/app/id1142465304?mt=8) iOS App's web
   2. open up [http://localhost:6001](http://localhost:6001) in your browser of choice.
 * Start the production (prod mode)
   1. run
-    ```
-      npm run build
-    ```
+  ```
+  npm run build
+  ```
     Production files are all generated into [dist](./dist).
   2. wait until `webpack` finishes building all files, then run the web server (production server)
   ```
-    npm run web-server
+  npm run web-server
   ```
   3. navigate to [http://localhost:6001](http://localhost:6001) in the browser. Again, your port number might be different than 6001.
 
 * If you want to lint your code,
-    ```
-      npm run lint
-    ```
+  ```
+  npm run lint
+  ```
 * If you want to clean `dist`,
-    ```
-      npm run clean
-    ```
+  ```
+  npm run clean
+  ```
+    
 * If you have made changes to the code and want to **deploy to Bluemix**,
   ```
-    npm build
+  npm build
   ```
+    
   after the build is finished,
   ```
-    cf push
+  cf push
   ```
 
 > **Note:** In `dev` mode, `redux-logger` and webpack hot modules are included for development purpose. In `build` or `prod` mode, these dev tools are removed and `dist` folder gets cleaned every time.
